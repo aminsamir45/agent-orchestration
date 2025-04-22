@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "generatedAt": "2025-04-22T15:19:57.885Z",
+    "tasksAnalyzed": 10,
+    "thresholdScore": 5,
+    "projectName": "Your Project Name",
+    "usedResearch": false
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "Setup Project Structure and Core Dependencies",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the project setup task into specific subtasks covering: 1) repository initialization with monorepo structure, 2) frontend Next.js setup with TypeScript, 3) backend Express.js configuration with middleware, 4) integration of AI libraries (Gemini, LangChain, LangGraph), and 5) visualization library setup and documentation creation.",
+      "reasoning": "This task involves setting up a complex architecture with multiple technologies (Next.js, Express, Gemini API, LangChain, LangGraph, visualization libraries). The monorepo structure adds coordination complexity, and proper environment configuration is critical for later tasks."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "Implement Agent System Description Input Interface",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Divide the input interface implementation into subtasks covering: 1) rich text editor with markdown support, 2) character counter and validation features, 3) guidance panel with example templates, and 4) file upload functionality with state management.",
+      "reasoning": "This task requires building a sophisticated text input interface with multiple features (rich text editing, character counting, templates, file upload). While technically straightforward, it involves careful UX design and state management considerations."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "Develop First-Pass AI Synthesis Backend",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the AI synthesis backend into subtasks covering: 1) Express route implementation, 2) Gemini API integration, 3) prompt engineering for requirement extraction, 4) confidence scoring algorithm development, and 5) response structuring with error handling.",
+      "reasoning": "This task involves complex AI integration with sophisticated prompt engineering. The confidence scoring algorithm and structured response generation require careful design. Error handling for AI API calls adds additional complexity."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Build Tool Selection Interface",
+      "complexityScore": 5,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Divide the tool selection interface into subtasks covering: 1) responsive grid layout with categorized checkboxes, 2) tooltip and description implementation, 3) custom tool input functionality, and 4) search/filter capabilities with state management.",
+      "reasoning": "This is a moderately complex UI task with multiple interactive elements. While technically straightforward, it requires careful organization of the tool categories and thoughtful UX design for the selection process."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "Implement Second-Pass AI Synthesis Backend",
+      "complexityScore": 9,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the second-pass AI synthesis backend into subtasks covering: 1) Express route for tool selections, 2) enhanced Gemini API prompting, 3) orchestration pattern logic implementation, 4) agent specification generation, 5) response structuring, and 6) prompt optimization and testing.",
+      "reasoning": "This task represents the core AI functionality of the application with high complexity. It requires sophisticated prompt engineering, multiple orchestration patterns, and detailed agent specifications. The quality of this component directly impacts the entire application."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Develop Orchestration Diagram Generation",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Divide the diagram generation system into subtasks covering: 1) integration of Mermaid.js and D3.js, 2) agent relationship visualization algorithms, 3) visual representation of different component types, 4) interactive features (zoom, pan, inspection), and 5) export functionality.",
+      "reasoning": "Visualization of complex agent relationships requires sophisticated algorithms and graphics programming. Supporting multiple diagram types and interactive features adds significant complexity."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Implement Agent Execution Interface",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the agent execution interface into subtasks covering: 1) LangChain and LangGraph integration, 2) configuration panel implementation, 3) input/output interface development, 4) execution logs and status indicators, and 5) error handling and debugging features.",
+      "reasoning": "This task involves integrating complex AI execution frameworks with a user-friendly interface. Real-time status updates and comprehensive error handling add significant complexity."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Develop Storage & Management System",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Divide the storage system implementation into subtasks covering: 1) local storage service using IndexedDB, 2) data models and version history tracking, 3) export/import functionality, and 4) UI components for browsing and managing saved designs.",
+      "reasoning": "Implementing a robust local storage system with version history is moderately complex. The main challenges are in data modeling and ensuring reliable persistence across browser sessions."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Implement Multi-Step Workflow and Progress Tracking",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the workflow implementation into subtasks covering: 1) global state management setup, 2) step navigation with validation, 3) progress indicator components, 4) data persistence between steps, and 5) confirmation dialogs and keyboard shortcuts.",
+      "reasoning": "This task involves coordinating the entire application flow with complex state management. Ensuring data consistency across steps and proper validation logic adds significant complexity."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Finalize UI/UX and Perform Integration Testing",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Divide the UI/UX finalization into subtasks covering: 1) consistent styling implementation, 2) responsive design optimization, 3) accessibility features, 4) performance optimization, 5) comprehensive testing, and 6) user documentation creation.",
+      "reasoning": "This task encompasses a wide range of polishing activities across the entire application. Ensuring consistency, accessibility, and performance while conducting thorough testing represents significant complexity."
+    }
+  ]
+}
