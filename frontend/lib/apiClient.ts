@@ -8,7 +8,7 @@ const apiClient = {
   /**
    * Process the initial system description
    * @param systemDescription - User's description of the agent system
-   * @returns Processed analysis with extracted components and confidence levels
+   * @returns Initial analysis with suggested agents and orchestration
    */
   async processSystemDescription(systemDescription: string) {
     try {
@@ -24,7 +24,8 @@ const apiClient = {
         throw new Error(`API error: ${response.status}`);
       }
       
-      return await response.json();
+      const result = await response.json();
+      return result.data;
     } catch (error) {
       console.error('Error processing system description:', error);
       throw error;
@@ -35,7 +36,7 @@ const apiClient = {
    * Process tool selections and refine the agent design
    * @param initialAnalysis - The results from the first analysis
    * @param toolSelections - Tools selected by the user
-   * @returns Refined agent design
+   * @returns Updated agents with tools assigned appropriately
    */
   async processToolSelections(initialAnalysis: any, toolSelections: string[]) {
     try {
@@ -51,7 +52,8 @@ const apiClient = {
         throw new Error(`API error: ${response.status}`);
       }
       
-      return await response.json();
+      const result = await response.json();
+      return result.data;
     } catch (error) {
       console.error('Error processing tool selections:', error);
       throw error;
@@ -59,9 +61,9 @@ const apiClient = {
   },
   
   /**
-   * Generate a diagram based on the refined agent design
-   * @param refinedDesign - The refined agent design
-   * @returns Mermaid diagram code and system implementation details
+   * Generate a diagram based on the refined design
+   * @param refinedDesign - The refined agent design data
+   * @returns Diagram data with nodes and edges
    */
   async generateDiagram(refinedDesign: any) {
     try {
@@ -70,14 +72,15 @@ const apiClient = {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ refinedDesign }),
+        body: JSON.stringify(refinedDesign),
       });
       
       if (!response.ok) {
         throw new Error(`API error: ${response.status}`);
       }
       
-      return await response.json();
+      const result = await response.json();
+      return result.data;
     } catch (error) {
       console.error('Error generating diagram:', error);
       throw error;
@@ -104,7 +107,8 @@ const apiClient = {
         throw new Error(`API error: ${response.status}`);
       }
       
-      return await response.json();
+      const result = await response.json();
+      return result.data;
     } catch (error) {
       console.error('Error saving design:', error);
       throw error;
@@ -123,7 +127,8 @@ const apiClient = {
         throw new Error(`API error: ${response.status}`);
       }
       
-      return await response.json();
+      const result = await response.json();
+      return result.data;
     } catch (error) {
       console.error('Error listing designs:', error);
       throw error;
@@ -150,7 +155,8 @@ const apiClient = {
         throw new Error(`API error: ${response.status}`);
       }
       
-      return await response.json();
+      const result = await response.json();
+      return result.data;
     } catch (error) {
       console.error('Error executing agent system:', error);
       throw error;
